@@ -222,7 +222,7 @@ Now lets trace the stack frame
 
 * Here we can see that content of rpb got overwritten by 41414141 which is actually our input AAAA.
 * Lets see how many A's required to control rbp(it is easy using pattern generator, will discuss in upcoming blogs)
-* Lets run it again with input `AAAAAAAAAAAAAAAAAAAAAAAA0000111122223333444455556666`.
+* Lets run it again with input AAAAAAAAAAAAAAAAAAAAAAAA0000111122223333444455556666.
 <br>
 ```bash
 run AAAAAAAAAAAAAAAAAAAAAAAA0000111122223333444455556666
