@@ -276,11 +276,10 @@ gs             0x0	0
 
 ```
 <br>
-Here we can see that the content of ``rbp`` got overwritten with 0x3333333332323232 which is 33332222 in decimal, and  ``Little Endian`` notation of 22223333.
-
-Here unlike 32 bit we can not take direct control on rip, but rbp.
-Now from the given input we can conclude that a total of ``32 A's`` required + some 64 bit valid address in order to control rip and jump to some arbitrary address. <br>
-Lets create a python program which will print ``32 A's and 8 B's``<br>
+Here we can see that the content of rbp got overwritten with 0x3333333332323232 which is 33332222 in decimal, and  Little Endian notation of 22223333.<br>
+Here unlike 32 bit we can not take direct control on rip, but rbp.<br>
+Now from the given input we can conclude that a total of 32 A's required + some 64 bit valid address in order to control rip and jump to some arbitrary address. <br>
+Lets create a python program which will print 32 A's and 8 B's<br>
 input.py
 <br>
 ```python
