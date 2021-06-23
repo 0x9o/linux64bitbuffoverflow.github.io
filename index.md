@@ -224,7 +224,7 @@ Now lets trace the stack frame
 * Lets see how many A's required to control rbp(it is easy using pattern generator, will discuss in upcoming blogs)
 * Lets run it again with input AAAAAAAAAAAAAAAAAAAAAAAA0000111122223333444455556666.
 <br>
-```bash
+```
 run AAAAAAAAAAAAAAAAAAAAAAAA0000111122223333444455556666
 The program being debugged has been started already.
 Start it from the beginning? (y or n) y
@@ -274,8 +274,7 @@ Here unlike 32 bit we can not take direct control on rip, but rbp.<br>
 Now from the given input we can conclude that a total of 32 A's required + some 64 bit valid address in order to control rip and jump to some arbitrary address. <br>
 Lets create a python program which will print 32 A's and 8 B's<br>
 input.py
-<br>
-```python
+```
 #!/usr/bin/python
 buff='\x41'*32
 buff+='\x42'*8
