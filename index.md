@@ -15,7 +15,8 @@ First lets disable the ASLR so that we won't get new address every time we run t
 ```
 ## Step 2:
 
-* Create a vulnerable c program *_vulnerable.c_*<br>
+* Create a vulnerable c program *_vulnerable.c_*
+<br>
 
 ```c
 #include<stdio.h>
