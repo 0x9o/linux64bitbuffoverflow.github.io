@@ -167,11 +167,11 @@ Now lets trace the stack frame
 0x7fffffffe060:	0xffffeaa0	0x00007fff	0xffffead4	0x00007fff
 0x7fffffffe070:	0xffffeb04	0x00007fff	0xffffeb37	0x00007fff
 ```
-Execute the next instruction
+* Execute the next instruction
 ```
 (gdb) nexti
 ```
-Lets examine the stack frame
+* Lets examine the stack frame
 
 ```
 (gdb) x/128x $rsp
@@ -222,7 +222,7 @@ Lets examine the stack frame
 
 * Here we can see that content of rpb got overwritten by 41414141 which is actually our input AAAA.
 * Lets see how many A's required to control rbp(it is easy using pattern generator, will discuss in upcoming blogs)
-* Lets run it again with input ``AAAAAAAAAAAAAAAAAAAAAAAA0000111122223333444455556666``.
+* Lets run it again with input `AAAAAAAAAAAAAAAAAAAAAAAA0000111122223333444455556666`.
 <br>
 ```bash
 run AAAAAAAAAAAAAAAAAAAAAAAA0000111122223333444455556666
