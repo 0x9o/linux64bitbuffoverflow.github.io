@@ -18,7 +18,7 @@ First lets disable the ASLR so that we won't get new address every time we run t
 Create a vulnerable c program *_vulnerable.c_*
 <div style="background-color: black;">
 
-``c
+```c
 #include<stdio.h>
 #include<string.h>
 
@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 
     return 0;
 }
-``
+```
 </div>
 * ### Lets compile the above code without stack canary and DEP(enabling stack for execution).
 
