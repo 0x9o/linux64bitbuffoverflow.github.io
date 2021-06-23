@@ -231,6 +231,7 @@ Start it from the beginning? (y or n) y
 Starting program: /home/ubuntu/buffoflow/vulnerable AAAAAAAAAAAAAAAAAAAAAAAA0000111122223333444455556666
 
 Breakpoint 1, 0x0000000000400597 in vulnerable_function ()
+
 ```
 * Continue the execution of program
 
