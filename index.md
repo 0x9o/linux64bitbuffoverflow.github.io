@@ -229,22 +229,16 @@ run AAAAAAAAAAAAAAAAAAAAAAAA0000111122223333444455556666
 The program being debugged has been started already.
 Start it from the beginning? (y or n) y
 Starting program: /home/ubuntu/buffoflow/vulnerable AAAAAAAAAAAAAAAAAAAAAAAA0000111122223333444455556666
-
 Breakpoint 1, 0x0000000000400597 in vulnerable_function ()
-
 ```
 * Continue the execution of program
 
-```bash
-
+```
 (gdb) continue
 Continuing.
-
 Program received signal SIGSEGV, Segmentation fault.
 0x00000000004005b1 in vulnerable_function ()
-
 ```
-<br>
 * From the generated output notice that there is segmentation fault.
 * Lets examine the register.
 ```
@@ -273,7 +267,6 @@ ds             0x0	0
 es             0x0	0
 fs             0x0	0
 gs             0x0	0
-
 ```
 <br>
 Here we can see that the content of rbp got overwritten with 0x3333333332323232 which is 33332222 in decimal, and  Little Endian notation of 22223333.<br>
