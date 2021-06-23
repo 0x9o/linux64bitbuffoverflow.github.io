@@ -16,8 +16,7 @@ First lets disable the ASLR so that we won't get new address every time we run t
 ## Step 2:
 
 Create a vulnerable c program *_vulnerable.c_*
-<div style="background-color: rgb(50, 50, 50);">
-
+<div style="background-color: black;">
 ```c
 #include<stdio.h>
 #include<string.h>
