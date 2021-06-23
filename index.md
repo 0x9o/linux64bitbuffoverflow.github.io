@@ -347,7 +347,7 @@ Here we can see that ``rbp`` got overwritten by 0x4242424242424242
     * I got a shellcode which is less than 32 Byte for /bin/dash from source: <br>http://shell-storm.org/shellcode/files/shellcode-806.php<br>
 * Fill the buffer in following way<br>
 +-------------+-----------------+---------------------+<br>
-|&nbsp;&nbsp;&nbsp;&nbsp;Nop Sled&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;ShellCode&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Return Address&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;Nop Sled&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;ShellCode&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Return Address&nbsp;&nbsp;&nbsp;|<br>
 +-------------+-----------------+---------------------+<br>
 
 * Return address should be in such a way that it should point to start of the buffer.<br>
