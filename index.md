@@ -108,7 +108,7 @@ Dump of assembler code for function vulnerable_function:
 Here we need to set a break point in vulnerabale_function before copy at line no <+26> so that we can see what happens before and after copy inside the stack.
 
 ```
-b *vulnerable_function+26
+(gdb) b *vulnerable_function+26
 
 ```
 Now run the program with input: ``AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA``
@@ -489,9 +489,10 @@ ubuntu
 
 
 ```
+
 * Finally we got the shell.
 
-```
+```bash
                                 +------------> Nop Sled  
                                 |
 +--->0x7fffffffdea0:  0xf7ffe1c8|	0x00007fff	0xffffe35c	0x00007fff
