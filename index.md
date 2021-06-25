@@ -556,7 +556,7 @@ Please enter the string within limitubuntu@ubuntu:~/buffoflow$
 ```
 ================================End of Documents==================================
 
-# Thanks for reading !
+<center><h1>Thanks for reading !</h1></center>
 
 
 
